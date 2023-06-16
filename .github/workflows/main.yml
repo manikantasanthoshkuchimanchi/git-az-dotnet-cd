@@ -1,0 +1,37 @@
+name: Publish .net App
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+    
+env:
+  AZURE_WEBAPP_NAME: github-dotnet-az-cd
+  AZURE_WEBPAPP_PACKAGE_LOCATION: "./publish"
+    
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .net 6.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+          
+      - name: Project Restore
+        run: dotnet restore ./git-az-dotnet-cd.csproj
+        
+      - name: Build
+        run: dotnet build ./git-az-dotnet-cd.csproj --configuration Release --no-restore
+        
+      - name: Publish
+        run: dotnet publish ./git-az-dotnet-cd.csproj --configuration Release --no-build --output '${{ env.AZURE_WEBPAPP_PACKAGE_LOCATION }}'
+
+      - name: Deploy to Azure web app
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBPAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{ env.AZURE_WEBPAPP_PACKAGE_LOCATION }}
