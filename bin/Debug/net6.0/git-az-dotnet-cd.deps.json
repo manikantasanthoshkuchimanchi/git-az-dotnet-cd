@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "git-az-dotnet-cd/1.0.0": {
+        "runtime": {
+          "git-az-dotnet-cd.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "git-az-dotnet-cd/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

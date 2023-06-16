@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ir/QVkUdixObaZ90ofcDxdTHZrLQ6rniBQrFoX55xAPXCQ07mXFUaLOfzCrHnBurzJ8w9w4/9kWc67gNh/4alg==",
+  "success": true,
+  "projectFilePath": "/Volumes/Domestic/Projects/azure/git-az-dotnet-cd/git-az-dotnet-cd.csproj",
+  "expectedPackageFiles": [
+    "/Users/manikantasanthoshkuchimanchi/.nuget/packages/microsoft.netcore.app.ref/6.0.16/microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "/Users/manikantasanthoshkuchimanchi/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "/Users/manikantasanthoshkuchimanchi/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.16/microsoft.netcore.app.host.osx-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

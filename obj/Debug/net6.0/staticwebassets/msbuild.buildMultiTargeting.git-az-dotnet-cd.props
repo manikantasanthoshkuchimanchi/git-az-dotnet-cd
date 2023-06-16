@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/git-az-dotnet-cd.props" />
+</Project>
